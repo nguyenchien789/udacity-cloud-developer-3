@@ -5,7 +5,6 @@ import {sequelize} from './sequelize';
 import {IndexRouter} from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
-import {config} from './config/config';
 import {V0_USER_MODELS} from './controllers/v0/model.index';
 
 
@@ -22,7 +21,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   // We set the CORS origin to * so that we don't need to
   // worry about the complexities of CORS this lesson. It's
-  // something that will be covered in the next course.
+  // something that will be covered in the next course. 
   app.use(cors({
     allowedHeaders: [
       'Origin', 'X-Requested-With',
@@ -31,7 +30,7 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
     ],
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
     preflightContinue: true,
-    origin: config.url,
+    origin: '*',
   }));
 
   app.use('/api/v0/', IndexRouter);
@@ -44,7 +43,6 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
 
   // Start the Server
   app.listen( port, () => {
-    console.log( `server running ${config.url}` );
     console.log( `press CTRL+C to stop server` );
   } );
 })();
