@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: chiennm99/reverseproxy:v16
+      - image: chiennm99/reverseproxy:v19
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
