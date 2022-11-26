@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: chiennm99/udagram-api-feed:v3
+        image: chiennm99/udagram-api-feed:v14
         imagePullPolicy: Always  
         resources:
           requests:
